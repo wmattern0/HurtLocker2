@@ -15,13 +15,21 @@ public class PossibileLeetspeakDuplicate {
         this.leetspeakPattern = leetspeakPattern;
     }
 
-    String buildLeetspeakPattern(){
+    String buildLeetspeakPattern() {
         StringBuilder pattern = new StringBuilder();
+        if(firstChar == '*'){
+            this.firstChar = 'x';
+        }
+        if(lastChar == '*'){
+            this.lastChar = 'x';
+        }
         return pattern.append("((?i)(").append(firstChar).append(".{").append(length-2).append("}").append(lastChar).append("))").toString();
     }
 
-    public void setLeetspeakPattern(){
-        this.leetspeakPattern = buildLeetspeakPattern();
+    public void setLeetspeakPattern() {
+
+            this.leetspeakPattern = buildLeetspeakPattern();
+
     }
 
     public String getLeetspeakPattern() {

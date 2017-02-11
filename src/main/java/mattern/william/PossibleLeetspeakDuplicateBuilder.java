@@ -39,4 +39,3 @@ public class PossibleLeetspeakDuplicateBuilder {
         return new PossibileLeetspeakDuplicate(sourceString, firstChar, lastChar, length, leetspeakPattern);
     }
 }
-

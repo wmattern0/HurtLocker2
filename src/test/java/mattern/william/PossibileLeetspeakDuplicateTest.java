@@ -15,7 +15,7 @@ public class PossibileLeetspeakDuplicateTest {
     @Before
     public void setUp(){
         cookiesString = "cookies";
-        cookies = new PossibleLeetspeakDuplicateBuilder().setFirstChar('c').setLastChar('s').setLength(7).setSourceString(cookiesString).createPossibleLeetspeakDuplicate();
+        cookies = new PossibleLeetspeakDuplicateBuilder().setFirstChar('c').setLastChar('*').setLength(7).setSourceString(cookiesString).createPossibleLeetspeakDuplicate();
         cookies.setLeetspeakPattern();
 }
 
@@ -29,7 +29,7 @@ public class PossibileLeetspeakDuplicateTest {
 
     @Test
     public void setLeetspeakPattern() throws Exception {
-        String expected = "((?i)(c.{5}s))";
+        String expected = "((?i)(c.{5}[s|@]+))";
         String actual = cookies.leetspeakPattern;
         assertEquals(expected,actual);
     }
