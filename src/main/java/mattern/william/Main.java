@@ -52,7 +52,7 @@ public class Main {
             System.out.println(mapOfStrings.toString());
 
         } catch (WildcardException e){}
-        System.out.println(mapOfLeetspeakItems.toString());
+                System.out.println(mapOfLeetspeakItems.toString());
     }
 
     static public String[] splitter(String rawInput){
